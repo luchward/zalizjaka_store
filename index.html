@@ -22,6 +22,11 @@
                 <li><a href="#contacts">Контакти</a></li>
             </ul>
         </nav>
+        <div id="search">
+            <form action="/action_page.php">
+                <input type="search" name="search" placeholder="пошук у каталозі...">
+            </form>
+        </div>
         <div id="phones">
             <p>(032) 123 45 67</p>
             <p>(067) 987 65 43</p>
@@ -47,11 +52,100 @@
             </ul>
         </section>
         <section id="promotion">
+            <h3 class=headName>акційні пропозиції</h3>
             <section class="item">
-                <img class="itempicture" src="image/radeon-rx-550.jpg" alt="videocard radeon rx 550">
-                <p class="itemname">ВІДЕОКАРТА ASUS RADEON RX 550 2048MB AREZ PHOENIX (AREZ-PH-RX550-2G)</p>
-                
+                <img class="itemPicture" src="image/radeon-rx-550.jpg" alt="videocard radeon rx 550">
+                <p class="itemName">ВІДЕОКАРТА ASUS RADEON RX 550 2048MB AREZ PHOENIX (AREZ-PH-RX550-2G)</p>
+                <p class="itemPrice">2385</p>
+                <img class="icon" src="image/add-to-shopping-cart.svg" alt="add to shopping cart">
             </section>
+            <section class="item">
+                <img class="itemPicture" src="image/amd-ryzen.jpg" alt="amd ryzen processor">
+                <p class="itemName">ПРОЦЕССОР AMD RYZEN 3 2200G (YD2200C5FBBOX)</p>
+                <p class="itemPrice">2466</p>
+                <img class="icon" src="image/add-to-shopping-cart.svg" alt="add to shopping cart">
+            </section>
+            <section class="item">
+                <img class="itemPicture" src="image/kingston-ssd.jpg" alt="kingston ssd">
+                <p class="itemName">НАКОПИТЕЛЬ SSD 2.5" 240GB KINGSTON (SA400S37/240G)</p>
+                <p class="itemPrice">929</p>
+                <img class="icon" src="image/add-to-shopping-cart.svg" alt="add to shopping cart">
+            </section>
+            <section class="item">
+                <img class="itemPicture" src="image/hyperx-fury.jpg" alt="hyperx fury">
+                <p class="itemName">МОДУЛЬ ПАМЯТИ ДЛЯ КОМПЬЮТЕРА DDR4 8GB 2400 MHZ HYPERX FURY BLACK KINGSTON (HX424C15FB2/8)</p>
+                <p class="itemPrice">1012</p>
+                <img class="icon" src="image/add-to-shopping-cart.svg" alt="add to shopping cart">
+            </section>
+            <section class="item">
+                <img class="itemPicture" src="image/z390-a-pro.jpg" alt="z390-a pro">
+                <p class="itemName">МАТЕРИНСКАЯ ПЛАТА MSI Z390-A PRO</p>
+                <p class="itemPrice">3261</p>
+                <img class="icon" src="image/add-to-shopping-cart.svg" alt="add to shopping cart">
+            </section>
+            <section class="item">
+                <img class="itemPicture" src="image/vinga-1350w.jpg" alt="vinga 1350w">
+                <p class="itemName">БЛОК ПИТАНИЯ VINGA 1350W (VPS-1350 MINING EDITION V2)</p>
+                <p class="itemPrice">1103</p>
+                <img class="icon" src="image/add-to-shopping-cart.svg" alt="add to shopping cart">
+            </section>
+        </section>
+        <section id="mailout">
+            <h3 class=headName>підпишіться на розсилку і дізнавайтеся про новини та розпродажі першим!</h3>
+            <form action="/action_page.php">
+                <label>Ім'я
+                    <input type="text" name="firstName" placeholder="Ваше ім'я" required>
+                </label>
+                <label>Номер телефону
+                    <input type="tel" name="phone" placeholder="0691234567" pattern="[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}">
+                </label>
+                <label>Електронна пошта
+                    <input type="email" name="email" placeholder="Ваша електронна пошта" required>
+                </label>
+                <input type="submit" value="підписатись">
+            </form>
+        </section>
+        <section id="service">
+            <h3 class="headName">запит на ремонт</h3>
+            <form action="/action_page.php">
+                <label>Ім'я
+                    <input type="text" name="firstName" placeholder="Ваше ім'я" required>
+                </label>
+                <label>Номер телефону
+                    <input type="tel" name="phone" placeholder="0691234567" pattern="[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}">
+                </label>
+                <label>Електронна пошта
+                    <input type="email" name="email" placeholder="Ваша електронна пошта" required>
+                </label>
+                <textarea name="problem" rows="5" cols="50" required>Опишіть Вашу проблему</textarea>
+                <input type="submit" value="підписатись">
+            </form>
+        </section>
+        <section id="schedule">
+            <h3 class="headName">графік роботи</h3>
+            <table>
+                <tr>
+                    <th>понеділок - п'ятниця</th>
+                    <th>субота</th>
+                    <th>неділя</th>
+                </tr>
+                <tr>
+                    <td>з 9:00 до 20:00</td>
+                    <td>з 9:00 до 19:00</td>
+                    <td>з 10:00 до 17:00</td>
+                </tr>
+            </table>
+        </section>
+        <section id="contacts">
+            <h3 class="headName">контакти</h3>
+            <div class="contactField">
+                <img class="icon" src="image/position-pin.svg" alt="position pin">
+                <p>Адреса:<br>м. Львів,<br>вул. Шевченка, 125, офіс 35</p>
+            </div>
+            <div class="contactField">
+                <img class="icon" src="image/position-pin.svg" alt="position pin">
+                <p>Адреса:<br>м. Львів,<br>вул. Шевченка, 125, офіс 35</p>
+            </div>
         </section>
     </main>
 </body>
