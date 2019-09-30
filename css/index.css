@@ -17,13 +17,13 @@ header{
 }
 #brand h3 {
     font-family: Architects Daughter;
-    font-size: 4vw;
+    font-size: 4em;
 }
 #brand p {
-    font-size: 1.5vw;
+    font-size: 1.5em;
 }
 #phones {
-    font-size: 1.25vw;
+    font-size: 1.25em;
     font-weight: bold;
 }
 nav {
@@ -47,7 +47,7 @@ main {
 text-align: center;
 }
 #category h4 {
-    font-size: 1.5vw;
+    font-size: 1.5em;
 	font-weight: bold;
 }
 #category ul {
@@ -66,7 +66,7 @@ text-align: center;
 	color: rgb(238, 14, 14);
 }
 .headName {
-    font-size: 3vw;
+    font-size: 3em;
     font-variant: small-caps;
 }
 .itemPicture {
@@ -76,10 +76,10 @@ text-align: center;
 	/*float: left;*/
 }
 .item h4 {
-    font-size: 1.25vw;
+    font-size: 1.25em;
 }
 .item p {
-    font-size: 2vw;
+    font-size: 2em;
 }
 .icon {
     width:70px;
@@ -88,7 +88,7 @@ text-align: center;
 	/*float: right;*/
 }
 #loyalty, #mailout, #service, #shipment, #schedule, #contacts {
-    font-size: 1.25vw;
+    font-size: 1.25em;
 }
 #schedule table, th, td {
     border: 1px solid black;
@@ -96,6 +96,6 @@ text-align: center;
     padding: 15px;
 }
 footer {
-    font-size: 1.25vw;
+    font-size: 1.25em;
     text-align: center;
 }
