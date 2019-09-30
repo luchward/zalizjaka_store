@@ -1,0 +1,101 @@
+/** {
+	margin: 0;
+	padding: 0;
+}*/
+html,body {
+	width: 100%;
+	height: 100%;
+}
+header{
+	height:500px;
+	margin: 1px 1px 1px 1px;
+	padding: 20px 1px 1px 1px;
+    text-align: center;
+}
+#brand {
+   /* float: left;*/
+}
+#brand h3 {
+    font-family: Architects Daughter;
+    font-size: 4vw;
+}
+#brand p {
+    font-size: 1.5vw;
+}
+#phones {
+    font-size: 1.25vw;
+    font-weight: bold;
+}
+nav {
+	/*overflow: hidden;
+	float: right;*/
+}
+nav li {
+	/*float:left;*/
+	list-style: none;
+}
+nav li a {
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 0 30px;
+}
+nav li a:hover {
+	color: rgb(236, 25, 78);
+}
+main {
+text-align: center;
+}
+#category h4 {
+    font-size: 1.5vw;
+	font-weight: bold;
+}
+#category ul {
+  list-style-type: none;
+}
+#category li a {
+    font-size: 20px;
+	font-weight: bold;
+	text-decoration: none;
+    list-style-type: none;
+}
+#category li a:hover {
+	color: rgb(221, 20, 221);
+}
+#category li a:active {
+	color: rgb(238, 14, 14);
+}
+.headName {
+    font-size: 3vw;
+    font-variant: small-caps;
+}
+.itemPicture {
+	width:350px;
+    height:350px;
+    margin-left: 10px;
+	/*float: left;*/
+}
+.item h4 {
+    font-size: 1.25vw;
+}
+.item p {
+    font-size: 2vw;
+}
+.icon {
+    width:70px;
+    height:70px;
+    margin-right: 10px;
+	/*float: right;*/
+}
+#loyalty, #mailout, #service, #shipment, #schedule, #contacts {
+    font-size: 1.25vw;
+}
+#schedule table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 15px;
+}
+footer {
+    font-size: 1.25vw;
+    text-align: center;
+}
