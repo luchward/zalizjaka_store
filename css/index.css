@@ -39,12 +39,11 @@ header nav .menu a {
 header nav .menu a:hover {
     border: 2px solid var(--accent-color);
 }
-header nav .phones {
+header div .phones {
     display: flex;
-    flex-direction: row;/*не працює*/
-    align-items: space-between;
+    justify-content: space-between;
 }
-header nav .phones p {
+header div .phones p {
     margin: 0;
 }
 /*яким чином Media перевизначає властивості селекторів? Чи
