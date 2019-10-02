@@ -22,6 +22,8 @@ header nav .description {
     text-align: center;
     color: var(--additional-color);
 }
+/*Коли потрібно присвоювати властивість disply: flex батьківському
+елементу? Чому б не задекларувати на початку header nav - display: flex?*/
 header nav .menu {
     display: flex;
     justify-content: space-around;
@@ -31,13 +33,19 @@ header nav .menu {
 header nav .menu a {
 	text-decoration: none;
 	text-transform: uppercase;
-    color: var(--main-color);
     border: 2px solid transparent;
     padding: 5px;
 }
 header nav .menu a:hover {
     border: 2px solid var(--accent-color);
 }
+header nav .phones {
+    display: flex;
+    flex-direction: row;/*не працює*/
+    align-items: space-between;
+}
+/*яким чином Медіа Квері перевизначає властивості селекторів? Чи
+враховується specifisity?*/
 @media (min-width: 600px) {
     header nav {
         display: flex;
@@ -49,7 +57,6 @@ header nav .menu a:hover {
     header div {
         display: flex;
         align-items: center;
-        /*justify-content: space-between;*/
     }
     header div .search {
         order: 1;
@@ -60,11 +67,43 @@ header nav .menu a:hover {
         flex-direction: column;
         flex: 1;
     }
+    main #category {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    /*при заданні властивості батьківському елементу вона не наслідується
+    нащадковими. Чому?*/
+    main #category ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 header div {
     text-align: center;
 }
-
+main #category {
+    text-align: center;
+}
+/*як задати властивість, щоб рамка навколо посилання була однакової
+ширини у всіх елементів і дорівнювалась ширині контейнера?*/
+main #category ul {
+    padding: 0;
+    list-style-type: none;
+}
+main #category ul li {
+    padding: 5px;
+}
+main #category ul a {
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+    padding: 5px;
+}
+main #category ul a:hover {
+    border: 2px solid var(--accent-color);
+}
 /*#brand h3 {
     font-family: Architects Daughter;
     font-size: 4em;
