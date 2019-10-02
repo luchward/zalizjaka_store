@@ -7,6 +7,9 @@
     font-family: 'Cabin', sans-serif;
     color: black;
 }
+body {
+    max-width: 980px;
+}
 header nav .brand {
     font-family: var(--accent-font);
     font-size: 3rem;
@@ -43,20 +46,25 @@ header nav .menu a:hover {
     header nav .menu {
         flex: 1;
     }
+    header div {
+        display: flex;
+        align-items: center;
+        /*justify-content: space-between;*/
+    }
+    header div .search {
+        order: 1;
+        flex: 3;
+    }
+    header div .phones {
+        order: 2;
+        flex-direction: column;
+        flex: 1;
+    }
 }
-header div .phones {
-    font-size: 1em;
-    display: flex;
-    justify-content: space-around;
+header div {
+    text-align: center;
 }
-header div #search {
-    float: left;
-    padding: 6px;
-    border: none;
-    margin-top: 8px;
-    margin-right: 16px;
-    font-size: 17px;
-}
+
 /*#brand h3 {
     font-family: Architects Daughter;
     font-size: 4em;
