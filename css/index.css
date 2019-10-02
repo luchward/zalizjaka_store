@@ -44,7 +44,10 @@ header nav .phones {
     flex-direction: row;/*не працює*/
     align-items: space-between;
 }
-/*яким чином Медіа Квері перевизначає властивості селекторів? Чи
+header nav .phones p {
+    margin: 0;
+}
+/*яким чином Media перевизначає властивості селекторів? Чи
 враховується specifisity?*/
 @media (min-width: 600px) {
     header nav {
@@ -67,6 +70,10 @@ header nav .phones {
         flex-direction: column;
         flex: 1;
     }
+    header div .search form {
+        display: flex;
+        justify-content: space-between;/*не працює*/
+    }
     main #category {
         display: flex;
         flex-direction: column;
@@ -82,6 +89,10 @@ header nav .phones {
 }
 header div {
     text-align: center;
+}
+header div .search form {
+    display: flex;
+    justify-content: space-between;
 }
 main #category {
     text-align: center;
