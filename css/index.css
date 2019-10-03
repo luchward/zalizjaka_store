@@ -8,27 +8,35 @@
     color: black;
 }
 body {
-    max-width: 980px;
+    max-width: 1080px;
+}
+header nav {
+    display: flex;
 }
 header nav .brand {
+    flex: none;
     font-family: var(--accent-font);
     font-size: 3rem;
     text-align: center;
     color: var(--accent-color);
+    width: 240px;
 }
 header nav .description {
+    flex: initial;
     font-family: var(--additional-font);
     font-size: 1em;
     text-align: center;
     color: var(--additional-color);
+    min-width: 240px;
+    width: 300px;
 }
-/*Коли потрібно присвоювати властивість disply: flex батьківському
-елементу? Чому б не задекларувати на початку header nav - display: flex?*/
 header nav .menu {
-    display: flex;
+    flex: initial;
     justify-content: space-around;
     padding: 0;
     list-style-type: none;
+    min-width: 240px;
+    width: 300px;
 }
 header nav .menu a {
 	text-decoration: none;
@@ -46,9 +54,8 @@ header div .phones {
 header div .phones p {
     margin: 0;
 }
-/*яким чином Media перевизначає властивості селекторів? Чи
-враховується specifisity?*/
-@media (min-width: 600px) {
+
+/*@media (min-width: 600px) {
     header nav {
         display: flex;
         align-items: center;
@@ -71,21 +78,19 @@ header div .phones p {
     }
     header div .search form {
         display: flex;
-        justify-content: space-between;/*не працює*/
+        justify-content: space-between;
     }
     main #category {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
     }
-    /*при заданні властивості батьківському елементу вона не наслідується
-    нащадковими. Чому?*/
     main #category ul {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
     }
-}
+}*/
 header div {
     text-align: center;
 }
