@@ -8,8 +8,8 @@
     color: black;
 }
 body {
-    max-width: 1080px;
-    min-width: 512px;
+    max-width: 1600px;
+    min-width: 480px;
 }
 header nav {
     display: flex;
