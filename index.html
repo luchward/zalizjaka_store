@@ -113,38 +113,73 @@
         <section id="mailout">
             <h3>підпишіться на розсилку і дізнавайтеся про новини та розпродажі першим!</h3>
             <form action="action_page.php">
-                <div>
-                    <label>Ім'я
+                <div class="row">
+                    <div class="col-25">
+                        <label" for="firstName">Ім'я</label>
+                    </div>
+                    <div class="col-75">
                         <input type="text" name="firstName" placeholder="Ваше ім'я" required>
-                    </label>
-                    <label>Номер телефону
-                        <input type="tel" name="phone" placeholder="0691234567" pattern="[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}">
-                    </label>
-                    <label>Електронна пошта
-                        <input type="email" name="email" placeholder="mymail@mail.com" required>
-                    </label>
+                    </div>
                 </div>
-                <input type="submit" value="підписатись">
+                <div class="row">
+                    <div class="col-25">
+                        <label for="phone">Номер телефону</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="tel" name="phone" placeholder="0691234567" pattern="[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="email">Електронна пошта</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="email" name="email" placeholder="mymail@mail.com" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="submit" value="підписатись">
+                </div>
             </form>
         </section>
         <section id="service">
             <h3>запит на ремонт</h3>
             <form action="action_page.php">
-                <div>
-                    <label>Ім'я
-                        <input type="text" name="firstName" placeholder="Ваше ім'я" required>
-                    </label>
-                    <label>Номер телефону
-                        <input type="tel" name="phone" placeholder="0691234567" pattern="[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}">
-                    </label>
-                    <label>Електронна пошта
-                        <input type="email" name="email" placeholder="mymail@mail.com" required>
-                    </label>
-                    <label>Причина ремонту
-                        <textarea name="problem" rows="5" cols="50" required>Опишіть Вашу проблему</textarea>
-                    </label>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="fName">Ім'я</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" name="fName" placeholder="Ваше ім'я" required>
+                    </div>
                 </div>
-                <input type="submit" value="запит">
+                <div class="row">
+                    <div class="col-25">
+                        <label for="phoneNum">Номер телефону</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="tel" name="phoneNum" placeholder="0691234567" pattern="[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="elMail">Електронна пошта</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="email" name="elMail" placeholder="mymail@mail.com" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="problem">Причина ремонту</label>
+                    </div>
+                    <div class="col-75">
+                        <textarea id="problem" name="problem" placeholder="Опишіть Вашу проблему" style="height:200px" required></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="submit" value="запит">
+                </div>
             </form>
         </section>
         <section id="shipment">
@@ -207,3 +242,45 @@
     </footer>
 </body>
 </html>
+
+  <form action="/action_page.php">
+  <div class="row">
+    <div class="col-25">
+      <label for="fname">First Name</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="lname">Last Name</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="country">Country</label>
+    </div>
+    <div class="col-75">
+      <select id="country" name="country">
+        <option value="australia">Australia</option>
+        <option value="canada">Canada</option>
+        <option value="usa">USA</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="subject">Subject</label>
+    </div>
+    <div class="col-75">
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <input type="submit" value="Submit">
+  </div>
+  </form>
