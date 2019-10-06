@@ -113,33 +113,37 @@
         <section id="mailout">
             <h3>підпишіться на розсилку і дізнавайтеся про новини та розпродажі першим!</h3>
             <form action="action_page.php">
-                <label>Ім'я
-                    <input type="text" name="firstName" placeholder="Ваше ім'я" required>
-                </label>
-                <label>Номер телефону
-                    <input type="tel" name="phone" placeholder="0691234567" pattern="[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}">
-                </label>
-                <label>Електронна пошта
-                    <input type="email" name="email" placeholder="Ваша електронна пошта" required>
-                </label>
+                <div>
+                    <label>Ім'я
+                        <input type="text" name="firstName" placeholder="Ваше ім'я" required>
+                    </label>
+                    <label>Номер телефону
+                        <input type="tel" name="phone" placeholder="0691234567" pattern="[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}">
+                    </label>
+                    <label>Електронна пошта
+                        <input type="email" name="email" placeholder="mymail@mail.com" required>
+                    </label>
+                </div>
                 <input type="submit" value="підписатись">
             </form>
         </section>
         <section id="service">
             <h3>запит на ремонт</h3>
             <form action="action_page.php">
-                <label>Ім'я
-                    <input type="text" name="firstName" placeholder="Ваше ім'я" required>
-                </label>
-                <label>Номер телефону
-                    <input type="tel" name="phone" placeholder="0691234567" pattern="[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}">
-                </label>
-                <label>Електронна пошта
-                    <input type="email" name="email" placeholder="Ваша електронна пошта" required>
-                </label>
-                <label>
-                    Причина ремонту<textarea name="problem" rows="5" cols="50" required>Опишіть Вашу проблему</textarea>
-                </label>
+                <div>
+                    <label>Ім'я
+                        <input type="text" name="firstName" placeholder="Ваше ім'я" required>
+                    </label>
+                    <label>Номер телефону
+                        <input type="tel" name="phone" placeholder="0691234567" pattern="[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}">
+                    </label>
+                    <label>Електронна пошта
+                        <input type="email" name="email" placeholder="Ваша електронна пошта" required>
+                    </label>
+                    <label>
+                        Причина ремонту<textarea name="problem" rows="5" cols="50" required>Опишіть Вашу проблему</textarea>
+                    </label>
+                </div>
                 <input type="submit" value="запит">
             </form>
         </section>

@@ -186,9 +186,36 @@ main #promotion .item .icon {
         grid-gap: 5px;
     }
 }
-/*#loyalty, #mailout, #service, #shipment, #schedule, #contacts {
-    font-size: 1.25em;
-}*/
+main #mailout div, main #service div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+main #mailout div input[name="firstName"],
+main #mailout div input[name="phone"],
+main #mailout div input[name="email"],
+main #service div input[name="firstName"],
+main #service div input[name="phone"],
+main #service div input[name="email"] {
+    min-width: 200px;
+    padding: 3px 5px;
+    margin: 5px 10px;
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 3px;
+}
+main #mailout input[type="submit"],
+main #service input[type="submit"] {
+    display: block;
+    margin: 20px auto;
+    min-width: 200px;
+    height: 30px;
+    cursor: pointer;
+}
+#loyalty, #mailout, #service, #shipment, #schedule, #contacts {
+    margin: 5px;
+}
 #schedule table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
