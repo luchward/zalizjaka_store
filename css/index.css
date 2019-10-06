@@ -144,6 +144,9 @@ main #category section a:hover {
         margin: 2px;
     }
 }
+#loyalty, #mailout, #service, #shipment, #schedule, #contacts {
+    margin: 5px;
+}
 main h3 {
     font-size: 1.25em;
     text-transform: uppercase;
@@ -205,6 +208,12 @@ main #service div input[name="email"] {
     line-height: 20px;
     border-radius: 3px;
 }
+main #service div input[name="problem"] {
+    padding: 3px 5px;
+    margin: 5px 10px;
+    font-size: 16px;
+    border-radius: 3px;
+}
 main #mailout input[type="submit"],
 main #service input[type="submit"] {
     display: block;
@@ -213,13 +222,33 @@ main #service input[type="submit"] {
     height: 30px;
     cursor: pointer;
 }
-#loyalty, #mailout, #service, #shipment, #schedule, #contacts {
-    margin: 5px;
-}
-#schedule table, th, td {
+main #schedule table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
     padding: 15px;
+    margin: auto;
+}
+main #contacts div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+main #contacts .contactField {
+    text-align: center;
+}
+main #contacts .contactField .icon {
+    float: center;
+    width: 50px;
+}
+@media (min-width: 500px) {
+    main #contacts div {
+    flex-direction: row;
+    justify-content: space-around;
+    }
+}
+main #contacts .location {
+    display: block;
+    width: 100%;
 }
 footer {
     font-size: 1.25em;
