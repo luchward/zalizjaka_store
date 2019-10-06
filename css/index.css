@@ -16,6 +16,9 @@ body {
     min-width: 320px;
     margin: auto;
 }
+header, main {
+    margin: 5px;
+}
 header nav {
     display: flex;
     flex-direction: column;
@@ -70,9 +73,17 @@ header div .phones {
     display: flex;
     justify-content: space-around;
 }
-header div .search {
-    display: flex;
-    justify-content: center;
+header div .search input[type=search]{
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 20px;
+    background-color: white;
+    background-image: url(../image/search-icon.png);
+    background-position: 5px;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
 }
 main #category div {
     display: flex;
@@ -136,6 +147,9 @@ main #category section a:hover {
     header div .search {
         order: 1;
     }
+    header div .search input[type=search] {
+        width: 600px;
+    }
     header div .phones {
         flex-direction: column;
         order: 2;
@@ -143,9 +157,6 @@ main #category section a:hover {
     header div .phones p {
         margin: 2px;
     }
-}
-#loyalty, #mailout, #service, #shipment, #schedule, #contacts {
-    margin: 5px;
 }
 main h3 {
     font-size: 1.25em;
@@ -189,7 +200,9 @@ main #promotion .item .icon {
         grid-gap: 5px;
     }
 }
-input[type=text], textarea {
+
+main input[type=text], input[type=phone],
+input[type=tel], input[type=email], textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -197,12 +210,12 @@ input[type=text], textarea {
   resize: vertical;
 }
 
-label {
+main label {
   padding: 12px 12px 12px 0;
   display: inline-block;
 }
 
-input[type=submit] {
+main input[type=submit] {
   background-color: #4CAF50;
   color: white;
   padding: 12px 20px;
@@ -210,43 +223,42 @@ input[type=submit] {
   border-radius: 4px;
   cursor: pointer;
   float: right;
+  width: 120px;
 }
 
-input[type=submit]:hover {
+main input[type=submit]:hover {
   background-color: #45a049;
 }
 
-.container {
+main #mailout, #service {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
 }
 
-.col-25 {
+main .col-25 {
   float: left;
   width: 25%;
   margin-top: 6px;
 }
 
-.col-75 {
+main .col-75 {
   float: left;
   width: 75%;
   margin-top: 6px;
 }
 
-/* Clear floats after the columns */
-.row:after {
+main .row:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .col-25, .col-75, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
+@media (max-width: 600px) {
+    main .col-25, main .col-75, main input[type=submit] {
+        width: 100%;
+        margin-top: 5px;
+    }
 }
 /*main #mailout div, main #service div {
     display: flex;
