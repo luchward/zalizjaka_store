@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Cabin|Fira+Sans|Orbitron&display=swap');
 :root {
     --accent-font: 'Orbitron', sans-serif;
-    --accent-color: #116466;
+    --accent-color: #3aafa9;
     --additional-font: 'Fira Sans', sans-serif;
-    --additional-color: #D9B08C;
+    --additional-color: #2b7a78;
+    --background-color: #def2f1;
+    --additional-background-color: #feffff;
     font-family: 'Cabin', sans-serif;
     color: black;
     scroll-behavior: smooth;
@@ -16,21 +18,16 @@ body {
     min-width: 400px;
     margin: auto;
 }
-header, main {
+header {
+    background-color: var(--background-color);
     margin: 5px;
+    border-radius: 10px;
 }
 header nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10px;
 }
-/*header nav .brand {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}*/
 header nav h1 {
     font-family: var(--accent-font);
     font-size: 3rem;
@@ -61,6 +58,7 @@ header nav .menu {
 header nav .menu a {
 	text-decoration: none;
 	text-transform: uppercase;
+    font-weight: bold;
     border: 2px solid transparent;
     padding: 5px;
 }
@@ -70,6 +68,7 @@ header nav .menu a:hover {
 header div .phones {
     display: flex;
     justify-content: space-around;
+
 }
 header div .search input[type=search]{
     width: 100%;
@@ -82,6 +81,99 @@ header div .search input[type=search]{
     background-size: 20px 20px;
     background-repeat: no-repeat;
     padding: 12px 20px 12px 40px;
+}
+@media (min-width: 1100px) {
+    header nav {
+        flex-direction: row;
+        justify-content: center;
+    }
+    header nav .brand h3 {
+        width: 300px;
+        min-width: 200px;
+    }
+    header div {
+        display: flex;
+        justify-content: space-between;
+    }
+    header div .search {
+        order: 1;
+    }
+    header div .search input[type=search] {
+        width: 600px;
+    }
+    header div .phones {
+        flex-direction: column;
+        order: 2;
+    }
+    header div .phones p {
+        margin: 2px;
+    }
+}
+
+main {
+    margin: 5px;
+}
+main h3 {
+    font-size: 1.25em;
+    text-transform: uppercase;
+    text-align: center;
+}
+main p {
+    font-size: 1.25em;
+}
+
+main input[type=text], input[type=phone],
+input[type=tel], input[type=email], textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--additional-color);
+  border-radius: 4px;
+  resize: vertical;
+}
+main label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+main input[type=submit] {
+  background-color: var(--accent-color);
+  color: var(--additional-background-color);
+  font-size: 1em;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  width: 140px;
+}
+main input[type=submit]:hover {
+  background-color: var(--additional-color);
+}
+main .col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+main .col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+main .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (max-width: 600px) {
+    main .col-25, main .col-75, main input[type=submit] {
+        width: 100%;
+        margin-top: 5px;
+    }
+}
+
+main #category {
+    background-color: var(--background-color);
+    border-radius: 10px;
+    margin-bottom: 5px;
 }
 main #category div {
     display: flex;
@@ -98,6 +190,7 @@ main #category section ul {
     padding: 0;
     list-style-type: none;
     text-align: center;
+    font-weight: bold;
 }
 main #category section ul li {
     padding: 5px;
@@ -130,169 +223,57 @@ main #category section a:hover {
         text-align: left;
     }
 }
-@media (min-width: 1100px) {
-    header nav {
-        flex-direction: row;
-    }
-    header nav .brand h3 {
-        width: 300px;
-        min-width: 200px;
-    }
-    header div {
-        display: flex;
-        justify-content: space-between;
-    }
-    header div .search {
-        order: 1;
-    }
-    header div .search input[type=search] {
-        width: 600px;
-    }
-    header div .phones {
-        flex-direction: column;
-        order: 2;
-    }
-    header div .phones p {
-        margin: 2px;
-    }
+
+main #promotion {
+    background-color: var(--background-color);
+    border-radius: 10px;
+    margin-bottom: 5px;
+    padding: 5px;
 }
-main h3 {
-    font-size: 1.25em;
-    text-transform: uppercase;
-    text-align: center;
-}
-main p {
-    font-size: 1.25em;
-}
-main #promotion .item {
+main #promotion div .item {
     position: relative;
+    border: solid 2px var(--accent-color);
 }
-main #promotion .item .itemPicture {
+main #promotion div .item .itemPicture {
     display: block;
     width: 100%;
 }
-main #promotion .item h4 {
+main #promotion div .item h4 {
     text-align: center;
     font-size: 1em;
 }
-main #promotion .item p {
+main #promotion div .item p {
     font-size: 1.5em;
     margin-left: 10px;
 }
-main #promotion .item .icon {
+main #promotion div .item .icon {
     position: absolute;
     right: 10px;
     bottom: 0;
     max-width: 10%;
 }
 @media (min-width: 600px) {
-    main #promotion {
+    main #promotion div {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 5px;
     }
 }
 @media (min-width: 900px) {
-    main #promotion {
+    main #promotion div {
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 5px;
     }
 }
 
-main input[type=text], input[type=phone],
-input[type=tel], input[type=email], textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
+main #loyalty, #mailout, #service, #shipment, #schedule, #contacts {
+  border-radius: 10px;
+  background-color:var(--background-color);
+  padding: 5px;
+  margin-bottom: 5px;
 }
-
-main label {
-  padding: 12px 12px 12px 0;
-  display: inline-block;
-}
-
-main input[type=submit] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  float: right;
-  width: 120px;
-}
-
-main input[type=submit]:hover {
-  background-color: #45a049;
-}
-
-main #mailout, #service {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
-
-main .col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
-}
-
-main .col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
-}
-
-main .row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-@media (max-width: 600px) {
-    main .col-25, main .col-75, main input[type=submit] {
-        width: 100%;
-        margin-top: 5px;
-    }
-}
-/*main #mailout div, main #service div {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-}
-main #mailout div input[name="firstName"],
-main #mailout div input[name="phone"],
-main #mailout div input[name="email"],
-main #service div input[name="firstName"],
-main #service div input[name="phone"],
-main #service div input[name="email"] {
-    min-width: 200px;
-    padding: 3px 5px;
-    margin: 5px 10px;
-    font-size: 16px;
-    line-height: 20px;
-    border-radius: 3px;
-}
-main #service div input[name="problem"] {
-    padding: 3px 5px;
-    margin: 5px 10px;
-    font-size: 16px;
-    border-radius: 3px;
-}
-main #mailout input[type="submit"],
-main #service input[type="submit"] {
-    display: block;
-    margin: 20px auto;
-    min-width: 200px;
-    height: 30px;
-    cursor: pointer;
-}*/
 main #schedule table, th, td {
-    border: 1px solid black;
+    border: 1px solid;
     border-collapse: collapse;
     padding: 15px;
     margin: auto;
@@ -320,6 +301,9 @@ main #contacts .location {
     width: 100%;
 }
 footer {
-    font-size: 1.25em;
+    background-color: #17252a;
+    color: var(--background-color);
+    font-size: 1em;
     text-align: center;
+    padding: 5px;
 }
