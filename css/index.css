@@ -28,6 +28,9 @@ header nav {
     flex-direction: column;
     align-items: center;
 }
+header nav a {
+    text-decoration: none;
+}
 header nav h1 {
     font-family: var(--accent-font);
     font-size: 3rem;
@@ -126,6 +129,7 @@ main input[type=text], input[type=phone],
 input[type=tel], input[type=email], textarea {
   width: 100%;
   padding: 12px;
+  font-size: 1em;
   border: 1px solid var(--additional-color);
   border-radius: 4px;
   resize: vertical;
@@ -138,6 +142,7 @@ main input[type=submit] {
   background-color: var(--accent-color);
   color: var(--additional-background-color);
   font-size: 1em;
+  margin-top: 5px;
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
@@ -193,15 +198,18 @@ main #category section ul {
     font-weight: bold;
 }
 main #category section ul li {
-    padding: 5px;
+    padding: 1px;
 }
 main #category section a {
+    display: block;
     text-decoration: none;
     text-transform: uppercase;
-    border: 2px solid transparent;
+    border: 2px solid var(--accent-color);
+    border-radius: 5px;
+    padding: 3px;
 }
 main #category section a:hover {
-    border: 2px solid var(--accent-color);
+    border: 2px solid var(--additional-color);
 }
 @media (min-width: 754px) {
     main #category {
@@ -232,7 +240,7 @@ main #promotion {
 }
 main #promotion div .item {
     position: relative;
-    border: solid 2px var(--accent-color);
+    border: solid 1px var(--accent-color);
 }
 main #promotion div .item .itemPicture {
     display: block;
