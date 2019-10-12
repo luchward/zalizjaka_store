@@ -23,6 +23,11 @@ header {
     margin: 5px;
     border-radius: 10px;
 }
+#ajax {
+    background-color: var(--background-color);
+    margin: 5px;
+    border-radius: 10px;
+}
 header nav {
     display: flex;
     flex-direction: column;
