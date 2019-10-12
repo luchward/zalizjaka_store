@@ -79,7 +79,6 @@ header nav .menu a:hover {
 header div .phones {
     display: flex;
     justify-content: space-around;
-
 }
 header div .phones p {
     margin: 5px;
