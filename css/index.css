@@ -37,7 +37,7 @@ header nav h1 {
     text-align: center;
     color: var(--accent-color);
     min-width: 240px;
-    margin: 0;
+    margin: 0 0 10px 0;
     padding: 0;
 }
 header nav h3 {
@@ -55,8 +55,11 @@ header nav .menu {
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 0;
-    margin: 0;
+    margin: 5px 0 10px 0;
     list-style-type: none;
+}
+header nav .menu li{
+    margin: 10px 0 5px 0;
 }
 header nav .menu a {
 	text-decoration: none;
@@ -71,6 +74,10 @@ header nav .menu a:hover {
 header div .phones {
     display: flex;
     justify-content: space-around;
+
+}
+header div .phones p {
+    margin: 5px;
 
 }
 header div .search input[type=search]{
@@ -107,6 +114,7 @@ header div .search input[type=search]{
     header div .phones {
         flex-direction: column;
         order: 2;
+        margin-right: 20px;
     }
     header div .phones p {
         margin: 2px;
