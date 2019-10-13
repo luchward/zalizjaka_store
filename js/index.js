@@ -15,10 +15,10 @@ function addSection () {
     hat.textContent = 'WOW! You have found extra capabilities of the site!';
     sect.appendChild(hat);
     sect.setAttribute('class', 'highlight');
-    
+
     const currencyConverter = document.createElement('div');
     currencyConverter.appendChild('h4');
-    
+
 }*/
 let rate;
 const quantity = document.querySelector('#quantity');
