@@ -31,7 +31,7 @@ function arguments() {
     const currencyFrom = document.querySelector('.currency-form select[name=currencyFrom]').value;
     const currencyTo = document.querySelector('.currency-form select[name=currencyTo]').value;
     const quantity = document.querySelector('.currency-form input[name=quantity]').value;
-    const url = 'https://api.exchangerate-api.com/v4/latest/' + currencyFrom;
+    const url = 'https://api.exchangerate-api.com/v4/latest/UAH';
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
             const currencyRates = JSON.parse(xhr.responseText);
