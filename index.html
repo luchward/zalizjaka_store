@@ -34,21 +34,29 @@
         </div>
     </header>
     <div id="extra">
-        <p>I want to exchange</p>
-        <input type="number" name="quantity" placeholder="0.00">
-        <select name="currencyFrom">
-            <option value="usd">USD</option>
-            <option value="eur">EUR</option>
-            <option value="gbp">GBP</option>
-        </select>
-        <p>to</p>
-        <select name="currencyTo">
-            <option value="usd">USD</option>
-            <option value="eur">EUR</option>
-            <option value="gbp">GBP</option>
-        </select>
-        <p>at rate from <a href="">SITE EXCHANGE</a>
-        <p>Your result is <span>(result)</span></p>
+        <div id="currencyConverter">
+            <div id="from">
+                <p>I want to exchange</p>
+                <input type="number" name="quantity" placeholder="0.00">
+                <select name="currencyFrom">
+                    <option value="usd">USD</option>
+                    <option value="eur">EUR</option>
+                    <option value="gbp">GBP</option>
+                </select>
+            </div>
+            <div id="to">
+                <p>to</p>
+                <select name="currencyTo">
+                    <option value="usd">USD</option>
+                    <option value="eur">EUR</option>
+                    <option value="gbp">GBP</option>
+                </select>
+            </div>
+            <div id="result">
+                <p>at rate from <a href="">SITE EXCHANGE</a>
+                <p>Your result is <span>(result)</span></p>
+            </div>
+        </div>
     </div>
     <main>
         <article id="category">
