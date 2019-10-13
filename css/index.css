@@ -35,6 +35,18 @@ header {
     border-radius: 10px;
     text-align: center;
 }
+#extra {
+    display: flex;
+    font-family: var(--additional-font);
+    color: var(--background-color);
+    background-color: var(--additional-color);
+    margin: 5px;
+    border-radius: 10px;
+}
+.part {
+    display: flex;
+    margin: 0;
+}
 header nav {
     display: flex;
     flex-direction: column;
