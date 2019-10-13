@@ -26,7 +26,7 @@ const result = document.querySelector('#result');
 document.querySelector('.currency-form input[type=submit]')
     .addEventListener('click', arguments);
 
-function arguments() {
+/*function arguments() {
     const currencyFrom = document.querySelector('.currency-form select[name=currencyFrom]').value;
     const currencyTo = document.querySelector('.currency-form select[name=currencyTo]').value;
     const quantity = document.querySelector('.currency-form input[name=quantity]').value;
@@ -37,4 +37,19 @@ function arguments() {
             document.querySelector('rates.currencyTo').innerText = rate;
         } );
     result.value = eval('quantity' * 'rate');
+}*/
+
+function arguments() {
+    const currencyFrom = document.querySelector('.currency-form select[name=currencyFrom]').value;
+    const currencyTo = document.querySelector('.currency-form select[name=currencyTo]').value;
+    const quantity = document.querySelector('.currency-form input[name=quantity]').value;
+    const line = 'https://api.exchangerate-api.com/v4/latest/' + currencyFrom;
+    const xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            document.querySelector('rates.currencyTo').innerText = rate;
+        }
+    }
+    xhr.open('GET', 'line', true);
+    xhr.send();
 }
