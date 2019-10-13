@@ -18,7 +18,7 @@ body {
     min-width: 400px;
     margin: auto;
 }
-h3 {
+h3, p {
     margin: 0;
 }
 header {
@@ -43,9 +43,22 @@ header {
     margin: 5px;
     border-radius: 10px;
 }
+#currencyConverter h3 {
+    text-align: center;
+}
 .part {
     display: flex;
-    margin: 0;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--background-color);
+    margin: 10px;
+}
+.part input {
+    width: 90px;
+    font-size: 1em;
+    text-align: right;
+}
+.part p {
+    width: 300px;
 }
 header nav {
     display: flex;
