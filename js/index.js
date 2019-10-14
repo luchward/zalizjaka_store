@@ -38,6 +38,7 @@ function arguments(e) {
             let currencyRates = JSON.parse(xhr.responseText);
             let line = 'currencyRates.rates.' + currencyTo;
             result.value = quantity * currencyRates.rates[currencyTo];
+            result.value =  result.value.toFixed(2);
         }
     }
     xhr.open('POST', url, true);
