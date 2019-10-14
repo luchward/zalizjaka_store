@@ -20,7 +20,6 @@ function addSection () {
     currencyConverter.appendChild('h4');
 
 }*/
-let rate;
 const quantity = document.querySelector('#quantity');
 const result = document.querySelector('#result');
 document.querySelector('.currency-form input[type=submit]')
@@ -35,9 +34,9 @@ function arguments(e) {
     const url = 'https://api.exchangerate-api.com/v4/latest/' + currencyFrom;
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
-            let currencyRates = JSON.parse(xhr.responseText);
-            rate = quantity * currencyRates.rates[currencyTo];
-            result.value =  rate.toFixed(2);
+            const currencyRates = JSON.parse(xhr.responseText);
+            const resultRaw = quantity * currencyRates.rates[currencyTo];
+            result.value =  resultRaw.toFixed(2);
         }
     }
     xhr.open('POST', url, true);
