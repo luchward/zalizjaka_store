@@ -33,26 +33,19 @@
             </div>
         </div>
     </header>
+	<div id="extraNew"></div>
     <div id="extra">
         <div id="currencyConverter">
-        <h3>Currency converter</h3>
+			<h3>Currency converter</h3>
             <form class="currency-form">
 				<div class="part">
 					<p>I need to exchange</p>
 					<input type="number" name="quantity" placeholder="0.00">
-					<select name="currencyFrom">
-						<option value="USD">USD</option>
-						<option value="EUR">EUR</option>
-						<option value="GBP">GBP</option>
-					</select>
+					<select name="currencyFrom"></select>
 				</div>
 				<div class="part">
                     <p>to</p>
-                    <select name="currencyTo">
-                        <option value="USD">USD</option>
-                        <option value="EUR">EUR</option>
-                        <option value="GBP">GBP</option>
-                    </select>
+                    <select name="currencyTo"></select>
 				</div>
 				<div class="part">
                     <p>at rate from <a href="https://www.exchangerate-api.com/">www.exchangerate-api.com</a></p>
@@ -63,6 +56,9 @@
             <div class="part">
                 <p>Result is </p>
                 <input type="number" id="result" placeholder="0.00">
+            </div>
+			<div class="part">
+                <input type="button" id="close" value="close">
             </div>
         </div>
     </div>

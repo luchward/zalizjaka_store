@@ -1,25 +1,17 @@
-/*document.getElementById('ref')
+document.getElementById('ref')
     .addEventListener('click', addSection);
 
-function addSection () {
-    const sect = document.getElementById('extra');
-    let title = document.createElement('h3');
-    let headline = document.createElement('h4');
-    let para = document.createElement('p');
-    let span = document.createElement('span');
-    let form = document.createElement('form');
-    let input = document.createElement('input');
-    let select = document.createElement('select');
-    let option = document.createElement('option');
-    let type;
-    hat.textContent = 'WOW! You have found extra capabilities of the site!';
-    sect.appendChild(hat);
-    sect.setAttribute('class', 'highlight');
+function addSection() {
+	getRates();
+	document.querySelector('#extra').style.display = 'flex';
+}
 
-    const currencyConverter = document.createElement('div');
-    currencyConverter.appendChild('h4');
+document.getElementById('close')
+    .addEventListener('click', closeSection);
 
-}*/
+function closeSection() {
+	document.querySelector('#extra').style.display = 'none';
+}
 
 document.querySelector('.currency-form input[type=submit]')
     .addEventListener('click', currencyExchange);
@@ -42,8 +34,7 @@ function currencyExchange(e) {
     xhr.send();
 }
 
-function getRates(e) {
-    e.preventDefault();
+function getRates() {
     const xhr = new XMLHttpRequest();
     const url = 'https://api.exchangerate-api.com/v4/latest/USD';
     xhr.onreadystatechange = function() {
@@ -57,11 +48,52 @@ function getRates(e) {
 }
 
 function buidCurrencyList(lst) {
+	const slctFrom = document.querySelector('#extra #currencyConverter .part select[name=currencyFrom]');
+	const slctTo = document.querySelector('#extra #currencyConverter .part select[name=currencyTo]');
+	for (key in lst) {
+		const opt = document.createElement('option');
+		opt.setAttribute('value', key);
+		opt.textContent = key;
+		slctFrom.appendChild(opt);
+	}
+	for (key in lst) {
+		const opt = document.createElement('option');
+		opt.setAttribute('value', key);
+		opt.textContent = key;
+		slctTo.appendChild(opt);
+	}
+}
+/*function addSection() {
+	const sect = document.querySelector('header');
+	//const extraNew = document.createElement('div');
+	//sect.setAttribute('id', 'extra');
+	//sect.appendChild(extraNew);
+	const title = document.createElement('h2');
+	title.textContent = 'WOW! You have found extra posibilites of the site!';
+	sect.appendChild(title);
+	const currencyConverter = document.createElement('div');
+	currencyConverter.setAttribute('id', 'currencyConverter');
+	sect.appendChild(currencyConverter);
+	const subtitle = document.createElement('h3');
+	subtitle.textContent = 'Currency converter';
+	currencyConverter.appendChild(subtitle);
+	const currency-form = document.createElement('form');
+	currencyConverter.appendChils(currency-form);
+	const part-result = document.createElement('div');
+	part-result.setAttribute('class', 'part');
+	currencyConverter.appendChild(part-result);
+	const part-from = document.createElement('div');
+	part-from.setAttribute('class', 'part');
+	currency-form.appendChild(part-from);
+	let para = document.createElement('p');
+	para.textContent = 'I need to exchange';
+	part-from.appendChild(para);
+	
+	extra.setAttribute('id', 'extra');
 	const slct = document.querySelector('select[name=currency]');
 	for (key in lst) {
 		const opt = document.createElement('option');
 		opt.setAttribute('value', key);
 		opt.textContent = key;
 		slct.appendChild(opt);
-	}
-}
+	}*/

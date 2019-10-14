@@ -36,7 +36,7 @@ header {
     text-align: center;
 }
 #extra {
-    display: flex;
+    display: none;
     font-family: var(--additional-font);
     color: var(--background-color);
     background-color: var(--additional-color);
@@ -57,7 +57,7 @@ header {
     font-size: 1em;
     text-align: right;
 }
-.part input[type=submit], input[type=reset] {
+.part input[type=submit], input[type=reset], input[type=button] {
     width: 90px;
     font-size: 1em;
     text-align: center;
