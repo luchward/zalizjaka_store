@@ -22,9 +22,9 @@ function addSection () {
 }*/
 
 document.querySelector('.currency-form input[type=submit]')
-    .addEventListener('click', arguments);
+    .addEventListener('click', currencyExchange);
 
-function arguments(e) {
+function currencyExchange(e) {
     e.preventDefault();
     const xhr = new XMLHttpRequest();
     const currencyFrom = document.querySelector('.currency-form select[name=currencyFrom]').value;
@@ -40,4 +40,28 @@ function arguments(e) {
     }
     xhr.open('POST', url, true);
     xhr.send();
+}
+
+function getRates(e) {
+    e.preventDefault();
+    const xhr = new XMLHttpRequest();
+    const url = 'https://api.exchangerate-api.com/v4/latest/USD';
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            const currencyRates = JSON.parse(xhr.responseText).rates;
+			buidCurrencyList(currencyRates);
+        }
+    }
+    xhr.open('POST', url, true);
+    xhr.send();
+}
+
+function buidCurrencyList(lst) {
+	const slct = document.querySelector('select[name=currency]');
+	for (key in lst) {
+		const opt = document.createElement('option');
+		opt.setAttribute('value', key);
+		opt.textContent = key;
+		slct.appendChild(opt);
+	}
 }
