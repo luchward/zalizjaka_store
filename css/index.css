@@ -52,10 +52,15 @@ header {
     border-bottom: 1px solid var(--background-color);
     margin: 10px;
 }
-.part input {
+.part input[type=number] {
     width: 90px;
     font-size: 1em;
     text-align: right;
+}
+.part input[type=submit], input[type=reset] {
+    width: 90px;
+    font-size: 1em;
+    text-align: center;
 }
 .part p {
     width: 300px;
