@@ -22,21 +22,22 @@ function addSection () {
 }*/
 const quantity = document.querySelector('#quantity');
 const result = document.querySelector('#result');
+const currencyRates;
 document.querySelector('.currency-form input[type=submit]')
     .addEventListener('click', arguments);
+const currencyFrom = document.querySelector('.currency-form select[name=currencyFrom]').value;
+const currencyTo = document.querySelector('.currency-form select[name=currencyTo]').value;
+const quantity = document.querySelector('.currency-form input[name=quantity]').value;
+const url = 'https://api.exchangerate-api.com/v4/latest/' + currencyFrom;
+const resultRaw = quantity * currencyRates.rates[currencyTo];
+result.value =  resultRaw.toFixed(2);
 
 function arguments(e) {
     e.preventDefault();
     const xhr = new XMLHttpRequest();
-    const currencyFrom = document.querySelector('.currency-form select[name=currencyFrom]').value;
-    const currencyTo = document.querySelector('.currency-form select[name=currencyTo]').value;
-    const quantity = document.querySelector('.currency-form input[name=quantity]').value;
-    const url = 'https://api.exchangerate-api.com/v4/latest/' + currencyFrom;
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
-            const currencyRates = JSON.parse(xhr.responseText);
-            const resultRaw = quantity * currencyRates.rates[currencyTo];
-            result.value =  resultRaw.toFixed(2);
+           currencyRates = JSON.parse(xhr.responseText);    
         }
     }
     xhr.open('POST', url, true);
