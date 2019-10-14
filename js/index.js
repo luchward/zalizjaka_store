@@ -36,9 +36,8 @@ function arguments(e) {
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
             let currencyRates = JSON.parse(xhr.responseText);
-            let line = 'currencyRates.rates.' + currencyTo;
-            result.value = quantity * currencyRates.rates[currencyTo];
-            result.value =  result.value.toFixed(3);
+            rate = quantity * currencyRates.rates[currencyTo];
+            result.value =  rate.toFixed(2);
         }
     }
     xhr.open('POST', url, true);
