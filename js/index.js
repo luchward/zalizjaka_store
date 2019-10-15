@@ -1,4 +1,4 @@
-//'use strict';
+'use strict';
 document.getElementById('ref').addEventListener('click', addSection);
 
 function addSection() {
