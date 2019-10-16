@@ -51,13 +51,13 @@ function getRates() {
 function buidCurrencyList(lst) {
 	const slctFrom = document.querySelector('#extra #currencyConverter .part select[name=currencyFrom]');
 	const slctTo = document.querySelector('#extra #currencyConverter .part select[name=currencyTo]');
-	for (let key in lst) {
+	for (const key in lst) {
 		const opt = document.createElement('option');
 		opt.setAttribute('value', key);
 		opt.textContent = key;
 		slctFrom.appendChild(opt);
 	}
-	for (let key in lst) {
+	for (const key in lst) {
 		const opt = document.createElement('option');
 		opt.setAttribute('value', key);
 		opt.textContent = key;
