@@ -1,3 +1,4 @@
+'use strict';
 document.getElementById('ref')
     .addEventListener('click', addSection);
 
@@ -50,13 +51,13 @@ function getRates() {
 function buidCurrencyList(lst) {
 	const slctFrom = document.querySelector('#extra #currencyConverter .part select[name=currencyFrom]');
 	const slctTo = document.querySelector('#extra #currencyConverter .part select[name=currencyTo]');
-	for (key in lst) {
+	for (let key in lst) {
 		const opt = document.createElement('option');
 		opt.setAttribute('value', key);
 		opt.textContent = key;
 		slctFrom.appendChild(opt);
 	}
-	for (key in lst) {
+	for (let key in lst) {
 		const opt = document.createElement('option');
 		opt.setAttribute('value', key);
 		opt.textContent = key;
