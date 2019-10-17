@@ -1,4 +1,4 @@
-'use strict';
+(function() {'use strict';
 document.getElementById('ref')
     .addEventListener('click', addSection);
 
@@ -64,3 +64,4 @@ function buidCurrencyList(lst) {
 		slctTo.appendChild(opt);
 	}
 }
+})();
