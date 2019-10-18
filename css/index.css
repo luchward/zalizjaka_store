@@ -1,183 +1,179 @@
-@import url('https://fonts.googleapis.com/css?family=Cabin|Fira+Sans|Orbitron&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Cabin|Fira+Sans|Orbitron&display=swap");
 :root {
-    --accent-font: 'Orbitron', sans-serif;
-    --accent-color: #3aafa9;
-    --additional-font: 'Fira Sans', sans-serif;
-    --additional-color: #2b7a78;
-    --background-color: #def2f1;
-    --additional-background-color: #feffff;
-    font-family: 'Cabin', sans-serif;
-    color: black;
-    scroll-behavior: smooth;
+  --accent-font: "Orbitron", sans-serif;
+  --accent-color: #3aafa9;
+  --additional-font: "Fira Sans", sans-serif;
+  --additional-color: #2b7a78;
+  --background-color: #def2f1;
+  --additional-background-color: #feffff;
+  font-family: "Cabin", sans-serif;
+  color: black;
+  scroll-behavior: smooth;
 }
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 body {
-    max-width: 1200px;
-    min-width: 400px;
-    margin: auto;
+  max-width: 1200px;
+  min-width: 400px;
+  margin: auto;
 }
-h3, p {
-    margin: 0;
+h3,
+p {
+  margin: 0;
 }
 header {
-    background-color: var(--background-color);
-    margin: 5px;
-    border-radius: 10px;
-}
-.highlight {
-    font-family: var(--additional-font);
-    font-size: 1.25em;
-    color: var(--background-color);
-    background-color: var(--additional-color);
-    margin: 5px;
-    border-radius: 10px;
-    text-align: center;
+  background-color: var(--background-color);
+  margin: 5px;
+  border-radius: 10px;
 }
 #extra {
-    display: none;
-    font-family: var(--additional-font);
-    color: var(--background-color);
-    background-color: var(--additional-color);
-    margin: 5px;
-    border-radius: 10px;
+  display: none;
+  font-family: var(--additional-font);
+  color: var(--background-color);
+  background-color: var(--additional-color);
+  margin: 5px;
+  border-radius: 10px;
 }
 #currencyConverter h3 {
-    text-align: center;
+  text-align: center;
 }
 .part {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid var(--background-color);
-    margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--background-color);
+  margin: 10px;
 }
-.part input[type=number] {
-    width: 90px;
-    font-size: 1em;
-    text-align: right;
+.part input[type="number"] {
+  width: 90px;
+  font-size: 1em;
+  text-align: right;
 }
-.part input[type=submit], input[type=reset], input[type=button] {
-    width: 90px;
-    font-size: 1em;
-    text-align: center;
+.part input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  width: 90px;
+  font-size: 1em;
+  text-align: center;
 }
 .part p {
-    width: 300px;
+  width: 300px;
 }
 header nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 header nav a {
-    text-decoration: none;
+  text-decoration: none;
 }
 header nav h1 {
-    font-family: var(--accent-font);
-    font-size: 3rem;
-    text-align: center;
-    color: var(--accent-color);
-    min-width: 240px;
-    margin: 0 0 10px 0;
-    padding: 0;
+  font-family: var(--accent-font);
+  font-size: 3rem;
+  text-align: center;
+  color: var(--accent-color);
+  min-width: 240px;
+  margin: 0 0 10px 0;
+  padding: 0;
 }
 header nav h3 {
-    font-family: var(--additional-font);
-    font-size: 1em;
-    text-align: center;
-    color: var(--additional-color);
-    min-width: 250px;
-    max-width: 300px;
-    padding: 0;
+  font-family: var(--additional-font);
+  font-size: 1em;
+  text-align: center;
+  color: var(--additional-color);
+  min-width: 250px;
+  max-width: 300px;
+  padding: 0;
 }
 header nav h3:hover {
-    color: red;
+  color: red;
 }
 header nav .menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 0;
-    margin: 5px 0 10px 0;
-    list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0;
+  margin: 5px 0 10px 0;
+  list-style-type: none;
 }
-header nav .menu li{
-    margin: 10px 0 5px 0;
+header nav .menu li {
+  margin: 10px 0 5px 0;
 }
 header nav .menu a {
-	text-decoration: none;
-	text-transform: uppercase;
-    font-weight: bold;
-    border: 2px solid transparent;
-    padding: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 2px solid transparent;
+  padding: 5px;
 }
 header nav .menu a:hover {
-    border: 2px solid var(--accent-color);
+  border: 2px solid var(--accent-color);
 }
 header div .phones {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 header div .phones p {
-    margin: 5px;
-
+  margin: 5px;
 }
-header div .search input[type=search]{
-    width: 100%;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    font-size: 20px;
-    background-color: white;
-    background-image: url(../image/search-icon.png);
-    background-position: 5px;
-    background-size: 20px 20px;
-    background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
+header div .search input[type="search"] {
+  width: 100%;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 20px;
+  background-color: white;
+  background-image: url(../image/search-icon.png);
+  background-position: 5px;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
 }
 @media (min-width: 1100px) {
-    header nav {
-        flex-direction: row;
-        justify-content: center;
-    }
-    header nav .brand h3 {
-        width: 300px;
-        min-width: 200px;
-    }
-    header div {
-        display: flex;
-        justify-content: space-between;
-    }
-    header div .search {
-        order: 1;
-    }
-    header div .search input[type=search] {
-        width: 600px;
-    }
-    header div .phones {
-        flex-direction: column;
-        order: 2;
-        margin-right: 20px;
-    }
-    header div .phones p {
-        margin: 2px;
-    }
+  header nav {
+    flex-direction: row;
+    justify-content: center;
+  }
+  header nav .brand h3 {
+    width: 300px;
+    min-width: 200px;
+  }
+  header div {
+    display: flex;
+    justify-content: space-between;
+  }
+  header div .search {
+    order: 1;
+  }
+  header div .search input[type="search"] {
+    width: 600px;
+  }
+  header div .phones {
+    flex-direction: column;
+    order: 2;
+    margin-right: 20px;
+  }
+  header div .phones p {
+    margin: 2px;
+  }
 }
 
 main {
-    margin: 5px;
+  margin: 5px;
 }
 main h3 {
-    font-size: 1.25em;
-    text-transform: uppercase;
-    text-align: center;
+  font-size: 1.25em;
+  text-transform: uppercase;
+  text-align: center;
 }
 main p {
-    font-size: 1.25em;
+  font-size: 1.25em;
 }
 
-main input[type=text], input[type=phone],
-input[type=tel], input[type=email], textarea {
+main input[type="text"],
+input[type="phone"],
+input[type="tel"],
+input[type="email"],
+textarea {
   width: 100%;
   padding: 12px;
   font-size: 1em;
@@ -189,7 +185,7 @@ main label {
   padding: 12px 12px 12px 0;
   display: inline-block;
 }
-main input[type=submit] {
+main input[type="submit"] {
   background-color: var(--accent-color);
   color: var(--additional-background-color);
   font-size: 1em;
@@ -201,7 +197,7 @@ main input[type=submit] {
   float: right;
   width: 140px;
 }
-main input[type=submit]:hover {
+main input[type="submit"]:hover {
   background-color: var(--additional-color);
 }
 main .col-25 {
@@ -220,149 +216,153 @@ main .row:after {
   clear: both;
 }
 @media (max-width: 600px) {
-    main .col-25, main .col-75, main input[type=submit] {
-        width: 100%;
-        margin-top: 5px;
-    }
+  main .col-25,
+  main .col-75,
+  main input[type="submit"] {
+    width: 100%;
+    margin-top: 5px;
+  }
 }
 
 main #category {
-    background-color: var(--background-color);
-    border-radius: 10px;
-    margin-bottom: 5px;
+  background-color: var(--background-color);
+  border-radius: 10px;
+  margin-bottom: 5px;
 }
-main #category div {
-    display: flex;
-    justify-content: center;
-}
-main #category div img {
-    display: block;
-    width: 100%;
-}
-main #category section h4{
-    text-align: center;
+main #category section h4 {
+  text-align: center;
 }
 main #category section ul {
-    padding: 0;
-    list-style-type: none;
-    text-align: center;
-    font-weight: bold;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+  font-weight: bold;
 }
 main #category section ul li {
-    padding: 1px;
+  padding: 1px;
 }
 main #category section a {
-    display: block;
-    text-decoration: none;
-    text-transform: uppercase;
-    border: 2px solid var(--accent-color);
-    border-radius: 5px;
-    padding: 3px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 2px solid var(--accent-color);
+  border-radius: 5px;
+  padding: 3px;
 }
 main #category section a:hover {
-    border: 2px solid var(--additional-color);
+  border: 2px solid var(--additional-color);
 }
 @media (min-width: 754px) {
-    main #category {
-        display: flex;
-        justify-content: space-around;
-    }
-    main #category section {
-        order: 1;
-    }
-    main #category div {
-        order: 2;
-        margin-top: auto;
-        margin-bottom: auto;
-    }
-    main #category section h4 {
-        text-align: left;
-    }
-    main #category section ul {
-        text-align: left;
-    }
+  main #category {
+    display: flex;
+    justify-content: space-around;
+  }
+  main #carousel {
+    max-width: 754px;
+  }
+  main #category section {
+    order: 1;
+  }
+  main #category div {
+    order: 2;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  main #category section h4 {
+    text-align: left;
+  }
+  main #category section ul {
+    text-align: left;
+  }
 }
 
 main #promotion {
-    background-color: var(--background-color);
-    border-radius: 10px;
-    margin-bottom: 5px;
-    padding: 5px;
+  background-color: var(--background-color);
+  border-radius: 10px;
+  margin-bottom: 5px;
+  padding: 5px;
 }
 main #promotion div .item {
-    position: relative;
-    border: solid 1px var(--accent-color);
+  position: relative;
+  border: solid 1px var(--accent-color);
 }
 main #promotion div .item .itemPicture {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }
 main #promotion div .item h4 {
-    text-align: center;
-    font-size: 1em;
+  text-align: center;
+  font-size: 1em;
 }
 main #promotion div .item p {
-    font-size: 1.5em;
-    margin-left: 10px;
+  font-size: 1.5em;
+  margin-left: 10px;
 }
 main #promotion div .item .icon {
-    position: absolute;
-    right: 10px;
-    bottom: 0;
-    max-width: 10%;
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+  max-width: 10%;
 }
 @media (min-width: 600px) {
-    main #promotion div {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 5px;
-    }
+  main #promotion div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+  }
 }
 @media (min-width: 900px) {
-    main #promotion div {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 5px;
-    }
+  main #promotion div {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+  }
 }
 
-main #loyalty, #mailout, #service, #shipment, #schedule, #contacts {
+main #loyalty,
+#mailout,
+#service,
+#shipment,
+#schedule,
+#contacts {
   border-radius: 10px;
-  background-color:var(--background-color);
+  background-color: var(--background-color);
   padding: 5px;
   margin-bottom: 5px;
 }
-main #schedule table, th, td {
-    border: 1px solid;
-    border-collapse: collapse;
-    padding: 15px;
-    margin: auto;
+main #schedule table,
+th,
+td {
+  border: 1px solid;
+  border-collapse: collapse;
+  padding: 15px;
+  margin: auto;
 }
 main #contacts div {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 main #contacts .contactField {
-    text-align: center;
+  text-align: center;
 }
 main #contacts .contactField .icon {
-    float: center;
-    width: 50px;
+  float: center;
+  width: 50px;
 }
 @media (min-width: 500px) {
-    main #contacts div {
+  main #contacts div {
     flex-direction: row;
     justify-content: space-around;
-    }
+  }
 }
 main #contacts .location {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }
 footer {
-    background-color: #17252a;
-    color: var(--background-color);
-    font-size: 1em;
-    text-align: center;
-    padding: 5px;
+  background-color: #17252a;
+  color: var(--background-color);
+  font-size: 1em;
+  text-align: center;
+  padding: 5px;
 }
