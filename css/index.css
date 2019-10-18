@@ -210,7 +210,8 @@ main .col-75 {
   width: 75%;
   margin-top: 6px;
 }
-main .row:after {
+
+main .line:after {
   content: "";
   display: table;
   clear: both;
