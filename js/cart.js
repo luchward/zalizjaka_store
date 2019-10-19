@@ -30,14 +30,14 @@ class Cart {
     let total = 0;
     let cartDomSting = `<div class="container">
                 <div class="row">
-                    <div class="col-5"><strong>Product</strong></div>
-                    <div class="col-3"><strong>Price</strong></div>
-                    <div class="col-2"><strong>Quantity</strong></div>
+                    <div class="col-5"><strong>Товар</strong></div>
+                    <div class="col-3"><strong>Ціна</strong></div>
+                    <div class="col-2"><strong>Кількість</strong></div>
                 </div>`;
     for (const id in this.cart) {
       const product = productList.getProductById(id);
       total += product.price * this.cart[id];
-      cartDomSting += `<div class="row" data-id="${id}"> 
+      cartDomSting += `<div class="row" data-id="${id}">
                     <div class="col-5">${product.title}</div>
                     <div class="col-3">${product.price}</div>
                     <div class="col-2">${this.cart[id]}</div>
@@ -48,9 +48,9 @@ class Cart {
     total = total.toFixed(2);
     cartDomSting += `
                 <div class="row">
-                    <div class="col-5"><strong>TOTAL</strong></div>
-                    <div class="col-3"><strong>$${total}</strong></div>
-                </div>            
+                    <div class="col-5"><strong>Сума</strong></div>
+                    <div class="col-3"><strong>${total} грн</strong></div>
+                </div>
         </div>`;
     this.cartContainer.find('.cart-product-list-container').html(cartDomSting);
     this.cartContainer
@@ -94,12 +94,12 @@ class Cart {
           this.saveCart();
           this.updateBadge();
           this.renderCart();
-          window.showAlert('Thank you! ' + responseText);
+          window.showAlert('Дякуємо! ' + responseText);
           this.cartContainer.modal('hide');
         })
-        .catch(error => showAlert('There is an error: ' + error, true));
+        .catch(error => showAlert('Помилка: ' + error, true));
     } else {
-      window.showAlert('Please fill all fields', false);
+      window.showAlert('Будь-ласка, заповніть усі поля', false);
     }
   }
 }

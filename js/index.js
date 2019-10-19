@@ -1,12 +1,14 @@
-(function() {
-  'use strict';
-
-  const cart = new Cart($('#cartModal'));
+const cart = new Cart($('#cartModal'));
   const productList = new ProductList(
     'products.json',
     $('.products-container'),
     cart
   );
+
+/*(function() {
+  'use strict';
+
+
 
   document.getElementById('ref').addEventListener('click', addSection);
 
@@ -82,4 +84,4 @@
       slctTo.appendChild(opt);
     }
   }
-})();
+})();*/

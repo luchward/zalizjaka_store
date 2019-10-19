@@ -23,6 +23,21 @@ h3,
 p {
   margin: 0;
 }
+.card {
+    height: 100%;
+}
+
+.alert {
+    position: fixed;
+    top: 50px;
+    width: 50%;
+    left: 25%;
+    z-index: 1051;
+}
+
+.btn {
+    padding: 0.75rem 0.7rem;
+}
 header {
   background-color: var(--background-color);
   margin: 5px;
@@ -66,6 +81,9 @@ header nav {
   align-items: center;
 }
 header nav a {
+  text-decoration: none;
+}
+#brand {
   text-decoration: none;
 }
 header nav h1 {
@@ -278,13 +296,13 @@ main #category section a:hover {
   }
 }
 
-/*main #promotion {
+main #promotion {
   background-color: var(--background-color);
   border-radius: 10px;
   margin-bottom: 5px;
   padding: 5px;
 }
-main #promotion div .item {
+/*main #promotion div .item {
   position: relative;
   border: solid 1px var(--accent-color);
 }
