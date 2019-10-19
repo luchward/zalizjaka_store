@@ -278,7 +278,7 @@ main #category section a:hover {
   }
 }
 
-main #promotion {
+/*main #promotion {
   background-color: var(--background-color);
   border-radius: 10px;
   margin-bottom: 5px;
@@ -318,7 +318,7 @@ main #promotion div .item .icon {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 5px;
   }
-}
+}*/
 
 main #loyalty,
 #mailout,
