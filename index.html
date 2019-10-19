@@ -36,7 +36,7 @@
             </div>
         </div>
     </header>
-    <div id="extra">
+    <!--<div id="extra">
         <div id="currencyConverter">
 			<h3>Currency converter</h3>
             <form class="currency-form">
@@ -63,7 +63,7 @@
                 <input type="button" id="close" value="close">
             </div>
         </div>
-    </div>
+    </div>-->
     <main>
         <article id="category">
             <div id="carousel" class="carousel slide" data-ride="carousel">
@@ -111,8 +111,11 @@
             </section>
         </article>
         <article id="promotion">
-            <h3>акційні пропозиції</h3>
-            <div>
+            <h3 id="products">Товари</h3>
+            <div class="row products-container">
+                <!--Products are dynamically generated here-->
+            </div>
+            <!--<div>
                 <section class="item">
                     <img class="itemPicture" src="image/radeon-rx-550.jpg" alt="Відеокарта Radeon rx 550">
                     <h4>ВІДЕОКАРТА ASUS RADEON RX 550 2048MB AREZ PHOENIX (AREZ-PH-RX550-2G)</h4>
@@ -149,7 +152,7 @@
                     <p>1103 грн.</p>
                     <img class="icon" src="image/add-to-shopping-cart.svg" alt="Додати у кошик">
                 </section>
-            </div>
+            </div>-->
         </article>
         <section id="loyalty">
             <h3 class="headName">стати учасником програми лояльності</h3>
@@ -292,6 +295,62 @@
         <p>All rights reserved &#169;</p>
         <p> 2019 </p>
     </footer>
+    <!-- Modal Product Info -->
+    <div class="modal fade" id="productInfoModal" tabindex="-1" role="dialog" aria-labelledby="productInfoLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productInfoLabel">Product Info</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img class="card-img-top" src="" alt="">
+                    <h4 class="card-title"></h4>
+                    <p class="card-text"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button class="btn btn-primary buy" data-id="id">Buy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Cart -->
+    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartLabel">Cart</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="cart-product-list-container"></div>
+                    <hr>
+                    <div class="container">
+                        <form>
+                            <div class="form-group row">
+                                <label for="client-name" class="col-4 col-form-label">Your name:</label>
+                                <input class="form-control col-8" type="text" id="client-name" required>
+                            </div>
+                            <div class="form-group row">
+                                <label for="client-email" class="col-4 col-form-label">Your email:</label>
+                                <input class="form-control col-8" type="email" id="client-email" required>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button class="btn btn-primary order">Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="js/index.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -302,5 +361,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    
+    <script async src="js/smooth-scroll.js"></script>
+    <script async src="js/alert-window.js"></script>
+    <script defer src="js/cart.js"></script>
+    <script defer src="js/product-list.js"></script>
+    <script defer src="js/index.js"></script>
 </body>
 </html>
