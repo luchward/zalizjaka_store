@@ -5,6 +5,7 @@ class ProductList {
       .then(result => result.json())
       .then(products => {
         this.products = products;
+        products.sort((a, b) => a.price - b.price);
         this.renderProducts(renderContainer, products);
         this.addEventListeners();
       });
