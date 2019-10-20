@@ -7,9 +7,10 @@ class ProductList {
         this.products = products;
         this.renderProducts(renderContainer, products);
         this.addEventListeners();
+        let selectOrder = document.querySelector('#selectOrder').value;
         document
           .querySelector('#selectOrder')
-          .addEventListener('onchange', this.sorting(this.value, products));
+          .addEventListener('onchange', this.sorting(selectOrder, products));
       });
   }
   sorting(selectOrder, products) {
