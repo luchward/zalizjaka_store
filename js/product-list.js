@@ -5,20 +5,19 @@ class ProductList {
       .then(result => result.json())
       .then(products => {
         this.products = products;
-        this.renderProducts(renderContainer, products);
+        //this.renderProducts(renderContainer, products);
         this.addEventListeners();
         document
           .querySelector('#selectOrder')
           .addEventListener('change', event => {
-            const res = document.querySelector('#result');
-            res.innerHTML = event.target.value;
-            /*switch (event.target.value) {
+            switch (event.target.value) {
               case 'increasePrice':
                 return products.sort((a, b) => a.price - b.price);
               case 'decreasePrice':
                 return products.sort((a, b) => b.price - a.price);
-            }*/
+            }
           });
+        this.renderProducts(renderContainer, products);
       });
   }
   getProductById(id) {
