@@ -28,6 +28,11 @@ class ProductList {
             }
             this.renderProducts(renderContainer, products);
           });
+        document
+          .querySelector('.filter')
+          .addEventListener('keydown', () =>
+            this.renderProducts(renderContainer, products)
+          );
       });
   }
   getProductById(id) {
@@ -35,8 +40,14 @@ class ProductList {
   }
   renderProducts(container, products) {
     let productListDomString = '';
-    products.forEach(product => {
-      productListDomString += `<div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+    products
+      .filter(product =>
+        product.title
+          .toLowerCase()
+          .includes(document.querySelector('.filter').value.toLowerCase())
+      )
+      .forEach(product => {
+        productListDomString += `<div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
                   <div class="card product">
                     <image class="card-img-top" src="image/${product.image}"
                         alt="${product.title}">
@@ -52,7 +63,7 @@ class ProductList {
                     </div>
                   </div>
                 </div>`; //<p class="card-text">${product.description}</p>
-    });
+      });
     container.html(productListDomString);
   }
   addEventListeners() {
