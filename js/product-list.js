@@ -5,23 +5,19 @@ class ProductList {
       .then(result => result.json())
       .then(products => {
         this.products = products;
-        products.sort(name);
         this.renderProducts(renderContainer, products);
         this.addEventListeners();
         document
           .querySelector('#selectOrder')
-          .addEventListener('onchange', this.sorting(this.value, products));
+          .addEventListener('change', event => {
+            switch (event.target.value) {
+              case 'increasePrice':
+                return products.sort((a, b) => a.price - b.price);
+              case 'decreasePrice':
+                return products.sort((a, b) => b.price - a.price);
+            }
+          });
       });
-  }
-  sorting(selectOrder, products) {
-    switch (selectOrder) {
-      case 'increasePrice':
-        return products.sort((a, b) => a.price - b.price);
-      case 'decreasePrice':
-        return products.sort((a, b) => b.price - a.price);
-      case 'name':
-        return products.sort(name);
-    }
   }
   getProductById(id) {
     return this.products.find(el => el.id === id);
