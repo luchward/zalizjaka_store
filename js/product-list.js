@@ -17,6 +17,15 @@ class ProductList {
               case 'decreasePrice':
                 products.sort((a, b) => b.price - a.price);
                 break;
+              case 'name':
+                products.sort((a, b) =>
+                  a.name.toUpperCase() > b.name.toUpperCase()
+                    ? 1
+                    : a.name.toUpperCase() < b.name.toUpperCase()
+                    ? -1
+                    : 0
+                );
+                break;
             }
             this.renderProducts(renderContainer, products);
           });
