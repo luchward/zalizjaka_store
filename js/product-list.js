@@ -7,17 +7,19 @@ class ProductList {
         this.products = products;
         this.renderProducts(renderContainer, products);
         this.addEventListeners();
+        const res = document.querySelector('#result');
         document
           .querySelector('#selectOrder')
           .addEventListener('change', event => {
-            switch (event.target.value) {
+            /*switch (event.target.value) {
               case 'increasePrice':
                 return products.sort((a, b) => a.price - b.price);
               case 'decreasePrice':
                 return products.sort((a, b) => b.price - a.price);
-            }
-            document.querySelector('#result').innerHTML = products;
-            this.renderProducts(renderContainer, products);
+            }*/
+
+            res.innerHTML = JSON.parse(products);
+            //this.renderProducts(renderContainer, products);
           });
       });
   }
