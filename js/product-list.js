@@ -16,6 +16,7 @@ class ProductList {
               case 'decreasePrice':
                 return products.sort((a, b) => b.price - a.price);
             }
+            document.querySelector('#result').innerHTML = products;
             this.renderProducts(renderContainer, products);
           });
       });
