@@ -9,7 +9,7 @@ class ProductList {
         this.addEventListeners();
         document
           .querySelector('#selectOrder')
-          .addEventListener('onchange', sorting(this.value, products));
+          .addEventListener('onchange', this.sorting(this.value, products));
       });
   }
   sorting(selectOrder, products) {
