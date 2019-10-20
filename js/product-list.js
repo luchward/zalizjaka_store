@@ -17,15 +17,7 @@ class ProductList {
               case 'decreasePrice':
                 products.sort((a, b) => b.price - a.price);
                 break;
-              case 'name':
-                products.sort((a, b) =>
-                  a.name.toUpperCase() > b.name.toUpperCase()
-                    ? 1
-                    : a.name.toUpperCase() < b.name.toUpperCase()
-                    ? -1
-                    : 0
-                );
-                break;
+                case 'name': products.sort((a, b) => a.title.toUpperCase() > b.title.toUpperCase() ? 1 : a.title.toUpperCase() < b.title.toUpperCase() ? -1 : 0);
             }
             this.renderProducts(renderContainer, products);
           });
