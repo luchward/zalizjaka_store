@@ -135,7 +135,7 @@ header div .phones {
 header div .phones p {
   margin: 5px;
 }
-header div .search input[type="search"] {
+header div .search input[type="text"] {
   width: 100%;
   border: 2px solid #ccc;
   border-radius: 4px;
@@ -163,7 +163,7 @@ header div .search input[type="search"] {
   header div .search {
     order: 1;
   }
-  header div .search input[type="search"] {
+  header div .search input[type="text"] {
     width: 600px;
   }
   header div .phones {
