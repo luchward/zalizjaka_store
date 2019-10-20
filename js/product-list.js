@@ -5,7 +5,7 @@ class ProductList {
       .then(result => result.json())
       .then(products => {
         this.products = products;
-        //this.renderProducts(renderContainer, products);
+        this.renderProducts(renderContainer, products);
         this.addEventListeners();
         document
           .querySelector('#selectOrder')
@@ -16,8 +16,8 @@ class ProductList {
               case 'decreasePrice':
                 return products.sort((a, b) => b.price - a.price);
             }
+            this.renderProducts(renderContainer, products);
           });
-        this.renderProducts(renderContainer, products);
       });
   }
   getProductById(id) {
