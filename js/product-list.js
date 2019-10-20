@@ -5,10 +5,22 @@ class ProductList {
       .then(result => result.json())
       .then(products => {
         this.products = products;
-        products.sort((a, b) => a.price - b.price);
         this.renderProducts(renderContainer, products);
         this.addEventListeners();
+        document
+          .querySelector('#selectOrder')
+          .addEventListener('onchange', sorting(this.value, products));
       });
+  }
+  sorting(selectOrder, products) {
+    switch (selectOrder) {
+      case increasePrice:
+        return products.sort((a, b) => a.price - b.price);
+      case decreasePrice:
+        return products.sort((a, b) => b.price - a.price);
+      case name:
+        return products.sort(name);
+    }
   }
   getProductById(id) {
     return this.products.find(el => el.id === id);
@@ -18,26 +30,20 @@ class ProductList {
     products.forEach(product => {
       productListDomString += `<div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
                   <div class="card product">
-                    <image class="card-img-top" src="image/${
-                      product.image
-                    }"
+                    <image class="card-img-top" src="image/${product.image}"
                         alt="${product.title}">
                     <div class="card-body">
                       <h6 class="card-title">${product.title}</h6>
 
                       <button class="btn btn-info" data-toggle="modal"
-                        data-target="#productInfoModal" data-id="${
-                          product.id
-                        }">Інфо
+                        data-target="#productInfoModal" data-id="${product.id}">Інфо
                       </button>
-                      <button class="btn btn-primary buy" data-id="${
-                        product.id
-                      }">
+                      <button class="btn btn-primary buy" data-id="${product.id}">
                     ${product.price} грн - Купити
                       </button>
                     </div>
                   </div>
-                </div>`;//<p class="card-text">${product.description}</p>
+                </div>`; //<p class="card-text">${product.description}</p>
     });
     container.html(productListDomString);
   }

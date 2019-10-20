@@ -24,19 +24,19 @@ p {
   margin: 0;
 }
 .card {
-    height: 100%;
+  height: 100%;
 }
 
 .alert {
-    position: fixed;
-    top: 50px;
-    width: 50%;
-    left: 25%;
-    z-index: 1051;
+  position: fixed;
+  top: 50px;
+  width: 50%;
+  left: 25%;
+  z-index: 1051;
 }
 
 .btn {
-    padding: 0.75rem 0.7rem;
+  padding: 0.75rem 0.7rem;
 }
 header {
   background-color: var(--background-color);
@@ -295,7 +295,9 @@ main #category section a:hover {
     text-align: left;
   }
 }
-
+#promotion .input-group {
+  max-width: 300px;
+}
 main #promotion {
   background-color: var(--background-color);
   border-radius: 10px;

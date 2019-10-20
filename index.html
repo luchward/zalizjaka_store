@@ -117,6 +117,17 @@
         </article>
         <article id="promotion">
             <h3 id="products">Товари</h3>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Сортувати за:</label>
+                </div>
+                <select class="custom-select" id="selectOrder">
+                    <option selected>виберіть...</option>
+                    <option value="increasePrice">збільшенням ціни</option>
+                    <option value="decreasePrice">зменшенням ціни</option>
+                    <option value="name">найменуванням</option>
+                </select>
+            </div>
             <div class="row products-container">
                 <!--Products are dynamically generated here-->
             </div>
