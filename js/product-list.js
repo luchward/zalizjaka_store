@@ -10,12 +10,14 @@ class ProductList {
         document
           .querySelector('#selectOrder')
           .addEventListener('change', event => {
-            switch (event.target.value) {
+            const res = document.querySelector('#result');
+            res.innerHTML = event.target.value;
+            /*switch (event.target.value) {
               case 'increasePrice':
                 return products.sort((a, b) => a.price - b.price);
               case 'decreasePrice':
                 return products.sort((a, b) => b.price - a.price);
-            }
+            }*/
           });
       });
   }
