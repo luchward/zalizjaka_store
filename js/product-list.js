@@ -7,19 +7,18 @@ class ProductList {
         this.products = products;
         this.renderProducts(renderContainer, products);
         this.addEventListeners();
-        const res = document.querySelector('#result');
         document
           .querySelector('#selectOrder')
           .addEventListener('change', event => {
-            /*switch (event.target.value) {
+            switch (event.target.value) {
               case 'increasePrice':
-                return products.sort((a, b) => a.price - b.price);
+                products.sort((a, b) => a.price - b.price);
+                break;
               case 'decreasePrice':
-                return products.sort((a, b) => b.price - a.price);
-            }*/
-
-            res.innerHTML = JSON.parse(products);
-            //this.renderProducts(renderContainer, products);
+                products.sort((a, b) => b.price - a.price);
+                break;
+            }
+            this.renderProducts(renderContainer, products);
           });
       });
   }
