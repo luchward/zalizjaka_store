@@ -7,19 +7,17 @@ class ProductList {
         this.products = products;
         this.renderProducts(renderContainer, products);
         this.addEventListeners();
-        let selectOrder = document.querySelector('#selectOrder').value;
-        document
           .querySelector('#selectOrder')
-          .addEventListener('onchange', this.sorting(selectOrder, products));
+          .addEventListener('onchange', this.sorting(this.value, products));
       });
   }
   sorting(selectOrder, products) {
     switch (selectOrder) {
-      case increasePrice:
+      case 'increasePrice':
         return products.sort((a, b) => a.price - b.price);
-      case decreasePrice:
+      case 'decreasePrice':
         return products.sort((a, b) => b.price - a.price);
-      case name:
+      case 'name':
         return products.sort(name);
     }
   }
