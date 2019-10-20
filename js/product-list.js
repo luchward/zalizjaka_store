@@ -7,6 +7,7 @@ class ProductList {
         this.products = products;
         this.renderProducts(renderContainer, products);
         this.addEventListeners();
+        document
           .querySelector('#selectOrder')
           .addEventListener('onchange', this.sorting(this.value, products));
       });
