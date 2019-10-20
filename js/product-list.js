@@ -5,6 +5,7 @@ class ProductList {
       .then(result => result.json())
       .then(products => {
         this.products = products;
+        products.sort(name);
         this.renderProducts(renderContainer, products);
         this.addEventListeners();
         document
