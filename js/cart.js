@@ -49,9 +49,10 @@ class Cart {
     cartDomSting += `
                 <div class="row">
                     <div class="col-5"><strong>Сума</strong></div>
-                    <div class="col-3"><strong>${total} грн</strong></div>
+                    <div class="col-3"><strong>${total}</strong>
+                        <select class="currencyList" name="currencyTo"></select></div>
                 </div>
-        </div>`;
+            </div>`;
     this.cartContainer.find('.cart-product-list-container').html(cartDomSting);
     this.cartContainer
       .find('.plus')
