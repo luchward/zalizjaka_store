@@ -27,6 +27,24 @@ class Cart {
     localStorage['cart'] = JSON.stringify(this.cart);
   }
   renderCart() {
+    const xhr = new XMLHttpRequest();
+    const url = 'https://api.exchangerate-api.com/v4/latest/UAH';
+    let currency = '';
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        const currencyRates = JSON.parse(xhr.responseText).rates;
+        let opt;
+        for (const key in currencyRates) {
+          opt += '<option value="' + key + '">' + key + '</option>';
+        }
+        currency =
+          '<select class="currencyList" name="currencyTo">' +
+          opt +
+          '</select></div>';
+      }
+    };
+    xhr.open('POST', url, true);
+    xhr.send();
     let total = 0;
     let cartDomSting = `<div class="container">
                 <div class="row">
@@ -49,10 +67,8 @@ class Cart {
     cartDomSting += `
                 <div class="row">
                     <div class="col-5"><strong>Сума</strong></div>
-                    <div class="col-3"><strong>${total}</strong>
-                        <select class="currencyList" name="currencyTo"></select></div>
-                </div>
-            </div>`;
+                    <div class="col-3"><strong>${total}</strong>${currency}</div>
+                </div>`;
     this.cartContainer.find('.cart-product-list-container').html(cartDomSting);
     this.cartContainer
       .find('.plus')
