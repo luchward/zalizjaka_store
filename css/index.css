@@ -252,6 +252,9 @@ main #category {
 main .items-category {
   display: none;
 }
+main #category h6 {
+  display: none;
+}
 main #category section h4 {
   text-align: center;
 }
