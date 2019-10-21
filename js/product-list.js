@@ -41,6 +41,11 @@ class ProductList {
   renderProducts(container, products) {
     let productListDomString = '';
     products
+      .itemCategory(product =>
+        document
+          .querySelector('#items-category')
+          .innerHTML.includes(product.category)
+      )
       .filter(product =>
         product.title
           .toLowerCase()

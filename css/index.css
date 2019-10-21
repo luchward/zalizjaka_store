@@ -249,6 +249,9 @@ main #category {
   border-radius: 10px;
   margin-bottom: 5px;
 }
+main #category .items-group-flag {
+  display: none;
+}
 main #category section h4 {
   text-align: center;
 }
