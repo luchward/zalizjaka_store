@@ -27,24 +27,20 @@ class Cart {
     localStorage['cart'] = JSON.stringify(this.cart);
   }
   renderCart() {
-    const xhr = new XMLHttpRequest();
-    const url = 'https://api.exchangerate-api.com/v4/latest/UAH';
     let currency = '';
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState === 4 && xhr.status === 200) {
-        const currencyRates = JSON.parse(xhr.responseText).rates;
-        let opt;
-        for (const key in currencyRates) {
+    fetch('https://api.exchangerate-api.com/v4/latest/UAH')
+      .then(response => response.json())
+      .then(currencyRates => {
+        const lst = currencyRates.rates;
+        let opt = '';
+        for (const key in lst) {
           opt += '<option value="' + key + '">' + key + '</option>';
         }
         currency =
           '<select class="currencyList" name="currencyTo">' +
           opt +
           '</select></div>';
-      }
-    };
-    xhr.open('POST', url, true);
-    xhr.send();
+      });
     let total = 0;
     let cartDomSting = `<div class="container">
                 <div class="row">
