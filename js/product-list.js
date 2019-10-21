@@ -41,6 +41,7 @@ class ProductList {
   renderProducts(container, products) {
     let productListDomString = '';
     products
+      .filter(product => product.quantity)
       .filter(product =>
         document
           .querySelector('.items-category')
