@@ -34,9 +34,9 @@ class Cart {
         const lst = currencyRates.rates;
         let opt = '';
         for (const key in lst) {
-          opt += '<option value="' + key + '">' + key + '</option>';
+          opt += '<option value=\"' + key + '\">' + key + '</option>';
         }
-        currency =
+        currency = 'UAH' +
           '<select class="currencyList" name="currencyTo">' +
           opt +
           '</select></div>';
