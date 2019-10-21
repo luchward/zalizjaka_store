@@ -249,7 +249,7 @@ main #category {
   border-radius: 10px;
   margin-bottom: 5px;
 }
-main .items-category, #category h6 {
+main .items-category {
   display: none;
 }
 main #category section h4 {
