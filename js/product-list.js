@@ -41,7 +41,7 @@ class ProductList {
   renderProducts(container, products) {
     let productListDomString = '';
     products
-      .itemCategory(product =>
+      .itemsCategory(product =>
         document
           .querySelector('#items-category')
           .innerHTML.includes(product.category)
